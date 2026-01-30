@@ -6,22 +6,24 @@
 
 <img src="https://github.com/user-attachments/assets/e50cfccb-ca85-4d77-b37e-6e19cd672114" width="420" alt="Grok Chat Bot - Pepe Robot with Ø">
 
-**Just send a message → Get real Grok 4 answers instantly**  
-**Powered by xAI’s Grok 4**  
-**Free • Fully Uncensored • Unlimited after quick channel join**
+**Free • Fully Uncensored**
 </div>
 
 <div align="center">
-  <a href="https://t.me/roleplay_ai_channel">
-    <img src="https://img.shields.io/badge/Join_Channel_to_Unlock_Free_Access-@roleplay_ai_channel-FF0066?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0088cc" alt="Join Channel">
-  </a>
+
+Tired of official daily limits on grok.com / X? Get full, uncensored Grok 4 power right here
+
+**Unlimited Free Grok 4 Access via Telegram Bot**
+
+**Just send a message → Get real Grok 4 answers instantly** 
 </div>
 
-Grok Chat Bot brings you **direct access** to **Grok 4** — xAI's most powerful, unfiltered AI model rocking 2026.
 
-No lame filters. No corporate hand-holding. Just raw, witty, brutally honest replies with that signature Grok edge — dark humor, savage roasts, wild ideas, zero judgment.
-
-Chat about literally anything: spicy topics, money schemes, roleplay fantasies, black comedy, deep theories... this bot is built for it.
+<div align="center">
+  <a href="https://[t.me/grok_ai_telegram_bot](https://t.me/grok_ai_telegram_bot)">
+    <img src="https://img.shields.io/badge/Open_bot-@grok_ai_telegram_bot-FF0066?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0088cc" alt="Open Bot">
+  </a>
+</div>
 
 ### Why Users Are Hooked
 
