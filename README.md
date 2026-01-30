@@ -11,11 +11,11 @@
 
 <div align="center">
 
-Tired of official daily limits on grok.com? Get full, uncensored AI power right here
+Get full, uncensored AI power right here
 
 **Unlimited Free Grok 4 Access via Telegram Bot**
 
-**Just send a message → Get real Grok 4 answers instantly** 
+**Just send a message → Get real AI chat bot answers instantly** 
 </div>
 
 
