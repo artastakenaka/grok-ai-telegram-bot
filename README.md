@@ -20,7 +20,7 @@ Tired of official daily limits on grok.com / X? Get full, uncensored Grok 4 powe
 
 
 <div align="center">
-  <a href="https://([https://t.me/grok_ai_telegram_bot](https://t.me/grok_ai_telegram_bot))">
+  <a href="https://t.me/grok_ai_telegram_bot">
     <img src="https://img.shields.io/badge/Open_bot-@grok_ai_telegram_bot-FF0066?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0088cc" alt="Open Bot">
   </a>
 </div>
