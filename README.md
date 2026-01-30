@@ -11,7 +11,7 @@
 
 <div align="center">
 
-Tired of official daily limits on grok.com? Get full, uncensored Grok 4 power right here
+Tired of official daily limits on grok.com? Get full, uncensored AI power right here
 
 **Unlimited Free Grok 4 Access via Telegram Bot**
 
