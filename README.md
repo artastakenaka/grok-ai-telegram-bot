@@ -6,7 +6,7 @@
 
 <img src="https://github.com/user-attachments/assets/e50cfccb-ca85-4d77-b37e-6e19cd672114" width="420" alt="Grok Chat Bot - Pepe Robot with Ø">
 
-**Free • Fully Uncensored**
+**Fully Free**
 </div>
 
 <div align="center">
@@ -55,7 +55,7 @@ Get full, uncensored AI power right here
 
 **Just write the message → Get Grok answer**  
 **Powered by xAI Grok 4**  
-**Free • Uncensored • No limits after quick channel join**
+**Free • No limits after quick channel join**
 
 </div>
 
