@@ -1,6 +1,6 @@
 <div align="center">
 
-# Grok Telegram Bot | AI Chat bot
+# Grok Telegram Bot
 
 
 
