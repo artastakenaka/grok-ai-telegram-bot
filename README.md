@@ -1,12 +1,12 @@
 <div align="center">
 
-# Grok Telegram Bot – Free Grok 4 Access
+# Grok AI Telegram Bot
 
 
 
 <img src="https://github.com/user-attachments/assets/e50cfccb-ca85-4d77-b37e-6e19cd672114" width="420" alt="Grok Chat Bot - Pepe Robot with Ø">
 
-**The first real Grok 4 Telegram bot with long-term chat memory**<br>
+**The first real xAI Grok 4 Telegram bot with long-term chat memory**<br>
 **Free • Human-like AI**
 </div>
 
