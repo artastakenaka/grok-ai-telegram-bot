@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Grok Telegram Bot (Official Alternative) — Free Grok AI in Telegram
-    </title>
+    <title>Grok Telegram Bot | Free Grok AI Telegram Bot</title>
 
     <meta
       name="description"
-      content="Looking for the official Grok xAI Telegram bot? There is no public official release yet. This is an independent Grok Telegram bot: free monthly requests, fast replies, multilingual support, and pay-as-you-go top-ups via Telegram Stars."
+      content="Grok Telegram bot: free monthly requests and pay-as-you-go top-ups. A working Grok AI Telegram bot in a regular chat."
     />
 
     <link rel="icon" type="image/png" href="frog_with_logo.jpg" />
@@ -19,11 +17,11 @@
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Grok Telegram Bot (Official Alternative) — Free Grok AI in Telegram"
+      content="Grok Telegram Bot | Free Grok AI Telegram Bot"
     />
     <meta
       property="og:description"
-      content="Looking for the official Grok xAI Telegram bot? There is no public official release yet. This is an independent Grok Telegram bot: free monthly requests, fast replies, multilingual support, and pay-as-you-go top-ups via Telegram Stars."
+      content="Grok Telegram bot: free monthly requests and pay-as-you-go top-ups. A working Grok AI Telegram bot in a regular chat."
     />
     <meta
       property="og:image"
@@ -36,11 +34,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Grok Telegram Bot (Official Alternative) — Free Grok AI in Telegram"
+      content="Grok Telegram Bot | Free Grok AI Telegram Bot"
     />
     <meta
       name="twitter:description"
-      content="Looking for the official Grok xAI Telegram bot? There is no public official release yet. This is an independent Grok Telegram bot: free monthly requests, fast replies, multilingual support, and pay-as-you-go top-ups via Telegram Stars."
+      content="Grok Telegram bot: free monthly requests and pay-as-you-go top-ups. A working Grok AI Telegram bot in a regular chat."
     />
     <meta
       name="twitter:image"
@@ -54,10 +52,10 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Is there an official Grok xAI Telegram bot?",
+            "name": "Is there an official Grok Telegram bot?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "As of now, xAI has not released any public official Grok bot for Telegram. This website describes an independent community-built Grok Telegram bot."
+              "text": "Telegram and xAI discussed integrating Grok into Telegram in 2025, but they did not reach an agreement and the integration never launched. Telegram has a verified @GrokAI bot for Telegram Premium users, but it is widely reported to be unreliable and not responding. This website describes an independent community-built Grok Telegram bot."
             }
           },
           {
@@ -65,7 +63,7 @@
             "name": "Is this Grok Telegram bot free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "If you subscribe to the channel, you get 30 Grok requests for free every month. After that, you can top up using Telegram Stars and pay only for the requests you use."
+              "text": "Yes. Subscribe to the channel and get 30 free Grok requests every month. Need more? Top up via Telegram Stars and keep chatting pay-as-you-go."
             }
           },
           {
@@ -73,7 +71,7 @@
             "name": "Is this a cheap Grok alternative?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For users who don't use Grok daily, pay-as-you-go pricing can be cheaper than the official $30/month subscription because you only pay for what you use."
+              "text": "Often yes. Instead of paying $30/month, you can pay per request. If you don’t use Grok daily, it can be much cheaper."
             }
           }
         ]
@@ -101,10 +99,15 @@
         --slate: #1f2937;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             1200px 600px at 50% -180px,
             rgba(86, 130, 3, 0.22),
             transparent 60%
@@ -138,7 +141,8 @@
         position: absolute;
         inset: -40px -40px auto -40px;
         height: 260px;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             480px 240px at 50% 30%,
             rgba(86, 130, 3, 0.25),
             transparent 70%
@@ -206,7 +210,10 @@
         border: 1px solid rgba(255, 255, 255, 0.12);
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
         transform: translateY(0);
-        transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease,
+        transition:
+          transform 0.12s ease,
+          opacity 0.12s ease,
+          box-shadow 0.12s ease,
           border-color 0.12s ease;
         will-change: transform;
       }
@@ -230,7 +237,11 @@
 
       .btn-secondary {
         color: #fff;
-        background: linear-gradient(180deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.95));
+        background: linear-gradient(
+          180deg,
+          rgba(31, 41, 55, 0.95),
+          rgba(17, 24, 39, 0.95)
+        );
         border-color: rgba(255, 255, 255, 0.14);
       }
 
@@ -291,11 +302,35 @@
       .footer-links a:hover {
         text-decoration: underline;
       }
+
+      /* IN-PAGE NAV (anchors) */
+      .page-nav {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: -8px 0 26px;
+        opacity: 0.92;
+      }
+
+      .page-nav a {
+        color: var(--green-2);
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .page-nav a:hover {
+        text-decoration: none;
+        border-color: rgba(255, 255, 255, 0.18);
+      }
     </style>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" id="top">
       <div class="hero-cap"></div>
 
       <div class="hero">
@@ -303,7 +338,7 @@
         <img
           src="./frog_with_logo.jpg"
           width="200"
-          alt="Grok Telegram Bot — Free Grok AI in Telegram"
+          alt="Grok Telegram Bot — Free Grok AI Telegram Bot"
           class="hero-img"
         />
 
@@ -331,10 +366,24 @@
             Join @cyber_frog_ai
           </a>
         </div>
+
+        <!-- IN-PAGE NAVIGATION -->
+        <nav class="page-nav" aria-label="On-page navigation">
+          <a href="#official">Official</a>
+          <a href="#faq">FAQ</a>
+          <a href="#what-is">What is</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#upcoming">Upcoming</a>
+          <a href="#how-to">How to start</a>
+          <a href="#use-cases">Use cases</a>
+          <a href="#why">Why Grok</a>
+        </nav>
       </div>
 
       <!-- OFFICIAL GROK -->
       <section
+        id="official"
         style="
           margin: 40px auto;
           text-align: left;
@@ -344,17 +393,15 @@
           padding: 28px;
         "
       >
-        <h2 style="margin-top: 0">
-          Is there an official Grok xAI Telegram bot?
-        </h2>
+        <h2 style="margin-top: 0">Is there an official Grok Telegram bot?</h2>
 
         <p>Many people search for the <b>official Grok xAI Telegram bot</b>.</p>
 
         <p>
-          As of now,
-          <b>xAI has not released any public official Grok bot for Telegram</b>.
-          There is no publicly announced verified or officially supported Grok
-          Telegram bot available.
+          Telegram and xAI discussed an official Grok integration, but they did
+          not reach an agreement and it never launched. Telegram has a verified
+          <b>@GrokAI</b> bot for <b>Telegram Premium</b> users, but it is
+          reported to be unreliable and not responding.
         </p>
 
         <p>
@@ -368,10 +415,15 @@
           The bot is not affiliated with xAI, but it is designed for users who
           want to use Grok AI directly inside Telegram.
         </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- FAQ -->
       <section
+        id="faq"
         style="
           margin: 40px auto;
           text-align: left;
@@ -384,19 +436,21 @@
         <h2 style="margin-top: 0">FAQ</h2>
 
         <h3 style="margin: 18px 0 6px; font-size: 18px">
-          Is this the official Grok xAI Telegram bot?
+          Is this the official Grok Telegram bot?
         </h3>
         <p style="margin-top: 0">
-          No. There is currently
-          <b>no public official Grok Telegram bot</b> released by xAI. This is
-          an <b>independent community-built</b> Grok Telegram bot.
+          Telegram and xAI discussed integrating Grok into Telegram in 2025, but
+          they did not reach an agreement and the integration never launched.
+          Telegram has a verified @GrokAI bot for Telegram Premium users, but it
+          is widely reported to be unreliable and not responding. This website
+          describes an independent community-built Grok Telegram bot.
         </p>
 
         <h3 style="margin: 18px 0 6px; font-size: 18px">Is it free?</h3>
         <p style="margin-top: 0">
-          Yes. If you subscribe to the channel, you get
-          <b>30 free Grok requests every month</b>. After that, you can use
-          pay-as-you-go top-ups via <b>Telegram Stars</b>.
+          Yes. Subscribe to the channel and get
+          <b>30 free Grok requests every month</b>. Need more? Just top up via
+          <b>Telegram Stars</b> and keep chatting pay-as-you-go.
         </p>
 
         <h3 style="margin: 18px 0 6px; font-size: 18px">
@@ -404,14 +458,19 @@
         </h3>
         <p style="margin-top: 0">
           For many users, yes. Instead of a fixed monthly plan (like the
-          official <b>$30/month</b> subscription), you only pay for what you
-          use. If you don't use Grok daily, this can be a
-          <b>cheap Grok alternative</b>.
+          official
+          <b>$30/month</b> subscription), you pay per request. If you don’t use
+          Grok daily, this can be a <b>cheap Grok alternative</b>.
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
         </p>
       </section>
 
       <!-- WHAT IS -->
       <section
+        id="what-is"
         style="
           margin: 40px auto;
           text-align: left;
@@ -422,7 +481,9 @@
           box-shadow: 0 4px 20px rgba(0, 255, 128, 0.12);
         "
       >
-        <h2 style="color: #568203; margin-top: 0">What is Grok Telegram Bot?</h2>
+        <h2 style="color: #568203; margin-top: 0">
+          What is Grok Telegram Bot?
+        </h2>
         <p>
           We built what people expected from Grok inside Telegram: a real AI
           that responds naturally, works directly in chat, and feels fast and
@@ -430,17 +491,22 @@
         </p>
 
         <p>
-          Many users search for the <b>official Grok Telegram bot</b>. Since
-          there is currently no public official release, this project provides
-          an <b>independent alternative</b>
-          that brings Grok AI into Telegram.
+          Many users search for the <b>official Grok Telegram bot</b>. Telegram
+          and xAI discussed an official integration, but they did not reach an
+          agreement and it never launched. This project provides an
+          <b>independent alternative</b> that brings Grok AI into Telegram.
         </p>
 
         <p>Free • Human-like AI</p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- PRIVACY -->
       <section
+        id="privacy"
         style="
           margin: 40px auto;
           text-align: left;
@@ -478,10 +544,15 @@
           In practice, this makes the bot
           <b>more private than using Grok directly</b>.
         </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- PRICING -->
       <section
+        id="pricing"
         style="
           margin: 40px auto;
           text-align: left;
@@ -522,10 +593,14 @@
           Simple, transparent pricing designed for everyday users — not heavy
           power users.
         </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- UPCOMING -->
-      <section class="section-soft">
+      <section id="upcoming" class="section-soft">
         <h2>Upcoming Features</h2>
         <ul>
           <li>AI image generation</li>
@@ -533,20 +608,28 @@
           <li>Advanced tools</li>
         </ul>
         <p>A premium version is currently in development.</p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- HOW TO -->
-      <section class="section-soft">
+      <section id="how-to" class="section-soft">
         <h2>How to start</h2>
         <ol>
           <li>Open the bot: https://t.me/grok_ai_telegram_bot</li>
           <li>Subscribe: https://t.me/cyber_frog_ai</li>
           <li>Write any question — Grok replies instantly</li>
         </ol>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- USE CASES -->
-      <section class="section-soft">
+      <section id="use-cases" class="section-soft">
         <h2>What can you use Grok for?</h2>
         <ul>
           <li>Create content and post ideas</li>
@@ -556,10 +639,14 @@
           <li>Explain concepts and theories</li>
           <li>Brainstorm business and startup ideas</li>
         </ul>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
+        </p>
       </section>
 
       <!-- WHY -->
-      <section class="section-soft section-soft--dark">
+      <section id="why" class="section-soft section-soft--dark">
         <h2>Why Grok?</h2>
         <ul>
           <li>Higher emotional intelligence than most chatbots</li>
@@ -571,6 +658,10 @@
         <p>
           People who value <b>directness, realism, and personality</b> choose
           Grok.
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top">Back to top</a>
         </p>
       </section>
 
@@ -595,10 +686,15 @@
 
       <hr class="divider" />
 
-      <p style="font-size: 13px; opacity: 0.7; text-align: center" class="footer-links">
+      <p
+        style="font-size: 13px; opacity: 0.7; text-align: center"
+        class="footer-links"
+      >
         <a href="./privacy.html">Privacy Policy</a>
         &nbsp;|&nbsp;
         <a href="./terms.html">Terms of Service</a>
+        &nbsp;|&nbsp;
+        <a href="#top">Back to top</a>
       </p>
     </div>
   </body>
