@@ -14,6 +14,11 @@
     <link rel="icon" type="image/png" href="frog_with_logo.jpg" />
     <link rel="canonical" href="https://grok.cyberfrog.tech/" />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Open Graph -->
     <meta
       property="og:title"
@@ -179,6 +184,85 @@
         color: var(--muted);
       }
 
+      /* Pixel title */
+      .pixel-title {
+        image-rendering: pixelated;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+
+        font-family: "Press Start 2P", monospace;
+        font-size: 3rem;
+        font-weight: normal;
+
+        background: linear-gradient(
+          90deg,
+          #e9fbe6 0%,
+          #c9f7b3 35%,
+          #8aff4a 65%,
+          #45ff00 100%
+        );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        margin: 10px 0 8px;
+        line-height: 1.1;
+      }
+
+      @media (max-width: 640px) {
+        .pixel-title {
+          font-size: 2.4rem;
+        }
+      }
+
+      /* GLOBAL LINKS: no default blue/purple */
+      a {
+        color: #9ad35a;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:visited {
+        color: #9ad35a;
+      }
+
+      /* Back to top pill */
+      .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(154, 211, 90, 0.28);
+        background: rgba(154, 211, 90, 0.08);
+        color: #9ad35a;
+        text-decoration: none;
+        transition:
+          transform 0.12s ease,
+          border-color 0.12s ease,
+          background 0.12s ease;
+      }
+
+      .back-to-top:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+        border-color: rgba(154, 211, 90, 0.42);
+        background: rgba(154, 211, 90, 0.12);
+      }
+
+      .back-to-top:active {
+        transform: translateY(0);
+      }
+
+      .back-to-top:focus-visible {
+        outline: 2px solid rgba(154, 211, 90, 0.55);
+        outline-offset: 3px;
+      }
+
       /* Image */
       .hero-img {
         max-width: 90%;
@@ -277,13 +361,31 @@
         margin-bottom: 0;
       }
 
-      .section-soft a {
-        color: #9ad35a;
-        text-decoration: none;
+      /* Better colors for Official + FAQ */
+      .section-official {
+        background: rgba(31, 41, 55, 0.38);
+        border: 1px solid rgba(118, 166, 26, 0.18);
+        box-shadow:
+          0 14px 36px rgba(0, 0, 0, 0.35),
+          0 0 0 1px rgba(118, 166, 26, 0.04) inset;
       }
 
-      .section-soft a:hover {
-        text-decoration: underline;
+      .section-official h2 {
+        margin-top: 0;
+        color: #c9f7b3;
+      }
+
+      .section-faq {
+        background: rgba(15, 23, 42, 0.34);
+        border: 1px solid rgba(77, 163, 255, 0.18);
+        box-shadow:
+          0 14px 36px rgba(0, 0, 0, 0.35),
+          0 0 0 1px rgba(77, 163, 255, 0.04) inset;
+      }
+
+      .section-faq h2 {
+        margin-top: 0;
+        color: rgba(255, 255, 255, 0.95);
       }
 
       /* Divider */
@@ -342,9 +444,8 @@
           class="hero-img"
         />
 
-        <h1 style="font-size: 42px; margin: 10px 0 8px; font-weight: 800">
-          Grok Telegram Bot
-        </h1>
+        <h1 class="pixel-title">Grok Telegram Bot</h1>
+
         <h2
           style="
             font-size: 20px;
@@ -353,9 +454,8 @@
             margin: 0 auto 28px;
           "
         >
-          Looking for the <b>official Grok xAI Telegram bot</b>? There is
-          currently no public official bot — this is a free, independent
-          alternative powered by <b>Grok 4</b>.
+          <b>Grok Telegram bot free</b> with monthly requests. A working
+          <b>Grok AI Telegram bot</b> in a regular chat.
         </h2>
 
         <div class="btn-row">
@@ -372,28 +472,18 @@
           <a href="#official">Official</a>
           <a href="#faq">FAQ</a>
           <a href="#what-is">What is</a>
-          <a href="#privacy">Privacy</a>
           <a href="#pricing">Pricing</a>
           <a href="#upcoming">Upcoming</a>
           <a href="#how-to">How to start</a>
-          <a href="#use-cases">Use cases</a>
           <a href="#why">Why Grok</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
         </nav>
       </div>
 
       <!-- OFFICIAL GROK -->
-      <section
-        id="official"
-        style="
-          margin: 40px auto;
-          text-align: left;
-          background: #111827;
-          border: 1px solid #1f2937;
-          border-radius: 18px;
-          padding: 28px;
-        "
-      >
-        <h2 style="margin-top: 0">Is there an official Grok Telegram bot?</h2>
+      <section id="official" class="section-soft section-official">
+        <h2>Is there an official Grok Telegram bot?</h2>
 
         <p>Many people search for the <b>official Grok xAI Telegram bot</b>.</p>
 
@@ -417,23 +507,13 @@
         </p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
       <!-- FAQ -->
-      <section
-        id="faq"
-        style="
-          margin: 40px auto;
-          text-align: left;
-          background: #0f172a;
-          border: 1px solid #24324a;
-          border-radius: 18px;
-          padding: 28px;
-        "
-      >
-        <h2 style="margin-top: 0">FAQ</h2>
+      <section id="faq" class="section-soft section-faq">
+        <h2>FAQ</h2>
 
         <h3 style="margin: 18px 0 6px; font-size: 18px">
           Is this the official Grok Telegram bot?
@@ -464,7 +544,7 @@
         </p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -500,7 +580,7 @@
         <p>Free • Human-like AI</p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -546,7 +626,7 @@
         </p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -595,7 +675,7 @@
         </p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -610,7 +690,7 @@
         <p>A premium version is currently in development.</p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -624,7 +704,7 @@
         </ol>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -641,7 +721,7 @@
         </ul>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -661,7 +741,7 @@
         </p>
 
         <p style="margin-top: 18px; opacity: 0.85">
-          <a href="#top">Back to top</a>
+          <a href="#top" class="back-to-top">↑ Back to top</a>
         </p>
       </section>
 
@@ -681,20 +761,7 @@
       <p style="font-size: 12px; opacity: 0.5; text-align: center">
         grok ai official telegram bot · grok telegram bot · grok ai telegram ·
         grok 4 telegram · grok ai chat · telegram ai assistant · xai grok
-        telegram · ai chatbot telegram
-      </p>
-
-      <hr class="divider" />
-
-      <p
-        style="font-size: 13px; opacity: 0.7; text-align: center"
-        class="footer-links"
-      >
-        <a href="./privacy.html">Privacy Policy</a>
-        &nbsp;|&nbsp;
-        <a href="./terms.html">Terms of Service</a>
-        &nbsp;|&nbsp;
-        <a href="#top">Back to top</a>
+        telegram · ai
       </p>
     </div>
   </body>
