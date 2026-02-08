@@ -1,13 +1,19 @@
 <div align="center">
 
-# Grok AI Telegram Bot
-
-
+# Grok Telegram Bot
 
 <img src="https://github.com/user-attachments/assets/e50cfccb-ca85-4d77-b37e-6e19cd672114" width="420" alt="Grok Chat Bot - Pepe Robot with Ø">
 
 **The first real xAI Grok 4 Telegram bot with long-term chat memory**<br>
 **Free • Human-like AI**
+</div>
+
+<div align="center">
+
+Get real Grok AI power directly in Telegram <br>
+**Just send a message and get real AI chat bot answer** 
+
+🌐 **Official website:** https://grok.cyberfrog.tech
 </div>
 
 <div align="center">
@@ -23,9 +29,9 @@ Get real Grok AI power directly in Telegram <br>
   </a>
 </div>
 
-## What is Grok AI Telegram Bot?
+## What is Grok Telegram Bot?
 
-**Grok AI Telegram Bot** is a free Telegram chatbot powered by **Grok 4**, the latest AI model by **Elon Musk’s xAI**.
+**Grok Telegram Bot** is a free Telegram chatbot powered by **Grok 4**, the latest AI model by **Elon Musk’s xAI**.
 
 We built what Pavel Durov and Elon Musk talked about but never released:  
 a real Grok AI inside Telegram that **remembers your conversation**, responds naturally, and speaks without filters.
@@ -96,14 +102,14 @@ grok telegram bot, grok ai chat, xai grok telegram, grok 4 ai, grok chatbot, ai 
 <div align="center">
 
 **Powered by xAI Grok 4**  
-**Free • No limits after quick channel join**
+**Free • 30 free requests every month after joining the channel**
 
 </div>
 
 <div align="center">
 
 [![Start Chatting](https://img.shields.io/badge/Start_Chatting-@GrokAITelegramBot-26A69A?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/grok_ai_telegram_bot)
-[![Join Channel](https://img.shields.io/badge/Join_Channel-@roleplay_ai_channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/roleplay_ai_channel)
+[![Join Channel](https://img.shields.io/badge/Join_Channel-@cyber_frog_ai-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/cyber_frog_ai)
 [![xAI Powered](https://img.shields.io/badge/Powered_by-xAI-black?style=for-the-badge)](https://x.ai)
 
 </div>
