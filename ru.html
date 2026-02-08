@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Grok Telegram Bot | Бесплатный Grok AI бот в Telegram</title>
+
+    <meta
+      name="description"
+      content="Grok Telegram бот: бесплатные запросы каждый месяц. Рабочий Grok AI бот в Телеграме."
+    />
+
+    <link rel="icon" type="image/png" href="frog_with_logo.jpg" />
+    <link rel="canonical" href="https://grok.cyberfrog.tech/" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Grok Telegram Bot | Бесплатный Grok AI бот в Telegram"
+    />
+    <meta
+      property="og:description"
+      content="Grok Telegram бот: бесплатные запросы каждый месяц. Рабочий Grok AI бот в Телеграме."
+    />
+    <meta
+      property="og:image"
+      content="https://grok.cyberfrog.tech/frog_with_logo.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grok.cyberfrog.tech/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Grok Telegram Bot | Бесплатный Grok AI бот в Telegram"
+    />
+    <meta
+      name="twitter:description"
+      content="Grok Telegram бот: бесплатные запросы каждый месяц. Рабочий Grok AI бот в Телеграме."
+    />
+    <meta
+      name="twitter:image"
+      content="https://grok.cyberfrog.tech/frog_with_logo.jpg"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Есть ли официальный Grok-бот в Telegram?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Telegram и xAI обсуждали интеграцию Grok в Telegram в 2025 году, но не договорились, поэтому интеграция так и не вышла. У Telegram есть верифицированный бот @GrokAI для пользователей Telegram Premium, но, по многочисленным отзывам, он часто не отвечает и работает нестабильно. Это сайт неофициального Grok-бота."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Этот Grok-бот бесплатный?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Подпишитесь на канал и получите 30 бесплатных запросов Grok каждый месяц. Нужно больше? Пополните баланс через Telegram Stars и продолжайте общаться по модели pay-as-you-go."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Это дешёвая альтернатива Grok?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Часто — да. Вместо оплаты $30 в месяц вы платите за запросы. Если вы не используете Grok каждый день, это может быть заметно дешевле."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Base */
+      :root {
+        --bg: #0b0b0b;
+        --text: #ffffff;
+        --muted: rgba(255, 255, 255, 0.86);
+
+        --card: rgba(255, 255, 255, 0.03);
+        --card-strong: rgba(255, 255, 255, 0.02);
+
+        --border: rgba(255, 255, 255, 0.07);
+        --border-strong: rgba(255, 255, 255, 0.09);
+
+        --shadow: rgba(0, 0, 0, 0.35);
+
+        --green: #568203;
+        --green-2: #76a61a;
+
+        --slate: #1f2937;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background:
+          radial-gradient(
+            1200px 600px at 50% -180px,
+            rgba(86, 130, 3, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 520px at 20% 0%,
+            rgba(77, 163, 255, 0.12),
+            transparent 55%
+          ),
+          radial-gradient(
+            900px 520px at 80% 0%,
+            rgba(244, 180, 0, 0.12),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      /* Layout */
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 56px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      /* Hero glow “cap” behind the top area */
+      .hero-cap {
+        position: absolute;
+        inset: -40px -40px auto -40px;
+        height: 260px;
+        background:
+          radial-gradient(
+            480px 240px at 50% 30%,
+            rgba(86, 130, 3, 0.25),
+            transparent 70%
+          ),
+          radial-gradient(
+            520px 260px at 30% 40%,
+            rgba(77, 163, 255, 0.12),
+            transparent 70%
+          ),
+          radial-gradient(
+            520px 260px at 70% 40%,
+            rgba(244, 180, 0, 0.12),
+            transparent 70%
+          );
+        filter: blur(8px);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .hero {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.2px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      /* Pixel title */
+      .pixel-title {
+        image-rendering: pixelated;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+
+        font-family: "Press Start 2P", monospace;
+        font-size: 3rem;
+        font-weight: normal;
+
+        background: linear-gradient(
+          90deg,
+          #e9fbe6 0%,
+          #c9f7b3 35%,
+          #8aff4a 65%,
+          #45ff00 100%
+        );
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        margin: 10px 0 8px;
+        line-height: 1.1;
+      }
+
+      @media (max-width: 640px) {
+        .pixel-title {
+          font-size: 2.4rem;
+        }
+      }
+
+      /* GLOBAL LINKS: no default blue/purple */
+      a {
+        color: #9ad35a;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:visited {
+        color: #9ad35a;
+      }
+
+      /* Back to top pill */
+      .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(154, 211, 90, 0.28);
+        background: rgba(154, 211, 90, 0.08);
+        color: #9ad35a;
+        text-decoration: none;
+        transition:
+          transform 0.12s ease,
+          border-color 0.12s ease,
+          background 0.12s ease;
+      }
+
+      .back-to-top:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+        border-color: rgba(154, 211, 90, 0.42);
+        background: rgba(154, 211, 90, 0.12);
+      }
+
+      .back-to-top:active {
+        transform: translateY(0);
+      }
+
+      .back-to-top:focus-visible {
+        outline: 2px solid rgba(154, 211, 90, 0.55);
+        outline-offset: 3px;
+      }
+
+      /* Image */
+      .hero-img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 18px;
+        margin-bottom: 22px;
+        box-shadow: 0 14px 46px rgba(0, 0, 0, 0.62);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* Buttons */
+      .btn-row {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 26px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+        transform: translateY(0);
+        transition:
+          transform 0.12s ease,
+          opacity 0.12s ease,
+          box-shadow 0.12s ease,
+          border-color 0.12s ease;
+        will-change: transform;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .btn:active {
+        transform: translateY(-1px);
+        opacity: 0.96;
+      }
+
+      .btn-primary {
+        color: #fff;
+        background: linear-gradient(180deg, var(--green-2), var(--green));
+        border-color: rgba(118, 166, 26, 0.35);
+      }
+
+      .btn-secondary {
+        color: #fff;
+        background: linear-gradient(
+          180deg,
+          rgba(31, 41, 55, 0.95),
+          rgba(17, 24, 39, 0.95)
+        );
+        border-color: rgba(255, 255, 255, 0.14);
+      }
+
+      /* Sections (soft cards) */
+      .section-soft {
+        margin: 40px auto;
+        text-align: left;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 14px 36px var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+
+      .section-soft--dark {
+        background: var(--card-strong);
+        border: 1px solid var(--border-strong);
+      }
+
+      .section-soft ul,
+      .section-soft ol {
+        padding-left: 20px;
+        margin: 10px 0 0;
+      }
+
+      .section-soft li {
+        margin: 8px 0;
+        line-height: 1.5;
+      }
+
+      .section-soft p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Better colors for Official + FAQ */
+      .section-official {
+        background: rgba(31, 41, 55, 0.38);
+        border: 1px solid rgba(118, 166, 26, 0.18);
+        box-shadow:
+          0 14px 36px rgba(0, 0, 0, 0.35),
+          0 0 0 1px rgba(118, 166, 26, 0.04) inset;
+      }
+
+      .section-official h2 {
+        margin-top: 0;
+        color: #c9f7b3;
+      }
+
+      .section-faq {
+        background: rgba(15, 23, 42, 0.34);
+        border: 1px solid rgba(77, 163, 255, 0.18);
+        box-shadow:
+          0 14px 36px rgba(0, 0, 0, 0.35),
+          0 0 0 1px rgba(77, 163, 255, 0.04) inset;
+      }
+
+      .section-faq h2 {
+        margin-top: 0;
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      /* Divider */
+      .divider {
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 40px 0;
+      }
+
+      /* Footer links */
+      .footer-links a {
+        color: var(--green-2);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* IN-PAGE NAV (anchors) */
+      .page-nav {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: -8px 0 26px;
+        opacity: 0.92;
+      }
+
+      .page-nav a {
+        color: var(--green-2);
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .page-nav a:hover {
+        text-decoration: none;
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" id="top">
+      <div class="hero-cap"></div>
+
+      <div class="hero">
+        <!-- HERO -->
+        <img
+          src="./frog_with_logo.jpg"
+          width="200"
+          alt="Grok Telegram Bot — Бесплатный Grok AI бот в Telegram"
+          class="hero-img"
+        />
+
+        <h1 class="pixel-title">Grok Telegram Bot</h1>
+
+        <h2
+          style="
+            font-size: 20px;
+            opacity: 0.93;
+            max-width: 720px;
+            margin: 0 auto 28px;
+          "
+        >
+          <b>Бесплатный Grok Telegram бот</b> с ежемесячными запросами. Рабочий
+          <b>Grok AI бот </b> в Телеграм чате.
+        </h2>
+
+        <div class="btn-row">
+          <a href="https://t.me/grok_ai_telegram_bot" class="btn btn-primary">
+            Открыть @grok_ai_telegram_bot
+          </a>
+          <a href="https://t.me/cyber_frog_ai" class="btn btn-secondary">
+            Подписаться на @cyber_frog_ai
+          </a>
+        </div>
+
+        <!-- IN-PAGE NAVIGATION -->
+        <nav class="page-nav" aria-label="Навигация по странице">
+          <a href="#official">Официальный</a>
+          <a href="#faq">FAQ</a>
+          <a href="#what-is">Что это</a>
+          <a href="#pricing">Цены</a>
+          <a href="#upcoming">Скоро</a>
+          <a href="#how-to">Как начать</a>
+          <a href="#why">Почему Grok</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+        </nav>
+      </div>
+
+      <!-- OFFICIAL GROK -->
+      <section id="official" class="section-soft section-official">
+        <h2>Есть ли официальный Grok-бот в Telegram?</h2>
+
+        <p>Многие ищут <b>официального Grok xAI бота в Telegram</b>.</p>
+
+        <p>
+          Telegram и xAI обсуждали официальную интеграцию Grok, но не договорились —
+          поэтому интеграция так и не была запущена. У Telegram есть верифицированный
+          бот <b>@GrokAI</b> для пользователей <b>Telegram Premium</b>, но, по отзывам,
+          он не отвечает.
+        </p>
+
+        <p>
+          Этот проект — <b>независимый Grok-бот, созданный сообществом</b>,
+          который приносит Grok AI в Telegram с похожей функциональностью: быстрые
+          ответы, естественный диалог и доступ прямо из чата.
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section-soft section-faq">
+        <h2>FAQ</h2>
+
+        <h3 style="margin: 18px 0 6px; font-size: 18px">
+          Это официальный Grok-бот в Telegram?
+        </h3>
+        <p style="margin-top: 0">
+          Telegram и xAI обсуждали интеграцию Grok в Telegram в 2025 году, но не
+          договорились, поэтому интеграция так и не вышла. У Telegram есть
+          верифицированный бот @GrokAI для пользователей Telegram Premium, но, по
+          многочисленным отзывам, он часто не отвечает и работает нестабильно. На
+          этом сайте описан независимый Grok-бот, созданный сообществом.
+        </p>
+
+        <h3 style="margin: 18px 0 6px; font-size: 18px">Это бесплатно?</h3>
+        <p style="margin-top: 0">
+          Да. Подпишитесь на канал и получите
+          <b>30 бесплатных запросов Grok каждый месяц</b>. Нужно больше? Просто
+          пополните баланс через <b>Telegram Stars</b> ⭐ и продолжайте общаться
+          по модели pay-as-you-go.
+        </p>
+
+        <h3 style="margin: 18px 0 6px; font-size: 18px">
+          Это дешёвая альтернатива Grok?
+        </h3>
+        <p style="margin-top: 0">
+          Для многих пользователей — да. Вместо фиксированной подписки (например,
+          официальных <b>$30/месяц</b>) вы платите за запросы. Если вы не пользуетесь
+          Grok ежедневно, это может быть <b>дешёвой альтернативой Grok</b>.
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- WHAT IS -->
+      <section
+        id="what-is"
+        style="
+          margin: 40px auto;
+          text-align: left;
+          background: #0d1a14;
+          border: 1px solid #1a3c2e;
+          border-radius: 18px;
+          padding: 28px;
+          box-shadow: 0 4px 20px rgba(0, 255, 128, 0.12);
+        "
+      >
+        <h2 style="color: #568203; margin-top: 0">
+          Что такое Grok Telegram Bot?
+        </h2>
+        <p>
+          Мы сделали то, что многие ожидали от Grok в Telegram: реальный ИИ,
+          который отвечает естественно, работает прямо в чате и ощущается быстрым
+          и «живым».
+        </p>
+
+        <p>
+          Многие ищут <b>официального Grok-бота в Telegram</b>. Telegram и xAI
+          обсуждали официальную интеграцию, но не договорились — поэтому она так
+          и не была запущена. Этот проект — <b>независимая альтернатива</b>,
+          которая приносит Grok AI в Telegram.
+        </p>
+
+        <p>Бесплатно • По-человечески • В обычном чате</p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- PRIVACY -->
+      <section
+        id="privacy"
+        style="
+          margin: 40px auto;
+          text-align: left;
+          background: #0d141a;
+          border: 1px solid #1a2a3c;
+          border-radius: 18px;
+          padding: 28px;
+          box-shadow: 0 4px 20px rgba(0, 128, 255, 0.12);
+        "
+      >
+        <h2 style="color: #4da3ff; margin-top: 0">Мы ценим вашу приватность</h2>
+
+        <p>Приватность — один из ключевых принципов этого проекта.</p>
+
+        <p>
+          <b>Мы не сохраняем ваши сообщения</b> и не сохраняем ответы Grok. Нет
+          базы истории чатов, нет профилирования и нет трекинга.
+        </p>
+
+        <p>
+          Этот бот работает как простая <b>обёртка над Grok API</b>. Ваше сообщение
+          уходит напрямую в Grok, ответ возвращается вам — и ничего не сохраняется
+          «между делом».
+        </p>
+
+        <p>
+          В отличие от официального опыта Grok, где может требоваться авторизация
+          на сайте, этот Telegram-бот не передаёт Grok персональные данные о вас.
+          Grok видит запросы, которые приходят от нашего сервисного аккаунта, а не
+          от конкретных пользователей.
+        </p>
+
+        <p>
+          На практике это делает бота <b>более приватным</b>, чем использование Grok
+          напрямую.
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- PRICING -->
+      <section
+        id="pricing"
+        style="
+          margin: 40px auto;
+          text-align: left;
+          background: #14110d;
+          border: 1px solid #3c2a1a;
+          border-radius: 18px;
+          padding: 28px;
+          box-shadow: 0 4px 20px rgba(255, 160, 0, 0.12);
+        "
+      >
+        <h2 style="color: #f4b400; margin-top: 0">
+          Pay-as-you-go Grok — дешёвая альтернатива подписке
+        </h2>
+
+        <p>
+          Если вы подписаны на канал, вы получаете
+          <b>30 запросов Grok бесплатно каждый месяц</b> 🎁
+        </p>
+
+        <p>
+          После этого вы можете пополнить баланс через <b>Telegram Stars</b> ⭐ и
+          продолжать общаться без ограничений.
+        </p>
+
+        <p>
+          Этот бот работает по модели <b>pay-as-you-go</b> —
+          <b>без ежемесячной подписки</b>.<br />
+          Вы платите только за те запросы Grok, которые реально используете.
+        </p>
+
+        <p>
+          Для сравнения: официальная подписка Grok стоит <b>30$ в месяц</b>. Если
+          вы не используете Grok каждый день, этот бот может быть
+          <b>дешёвой альтернативой Grok</b> и заметно экономить деньги 💸
+        </p>
+
+        <p>
+          Прозрачная и простая модель оплаты — для обычных пользователей, а не
+          для тяжёлых «пауэр-юзеров».
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- UPCOMING -->
+      <section id="upcoming" class="section-soft">
+        <h2>Скоро в боте</h2>
+        <ul>
+          <li>Генерация изображений</li>
+          <li>Поиск в интернете в реальном времени</li>
+          <li>Расширенные инструменты</li>
+        </ul>
+        <p>Премиум-версия сейчас в разработке.</p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- HOW TO -->
+      <section id="how-to" class="section-soft">
+        <h2>Как начать</h2>
+        <ol>
+          <li>Откройте бота: https://t.me/grok_ai_telegram_bot</li>
+          <li>Подпишитесь на канал: https://t.me/cyber_frog_ai</li>
+          <li>Напишите любой вопрос — Grok отвечает мгновенно</li>
+        </ol>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- USE CASES -->
+      <section id="use-cases" class="section-soft">
+        <h2>Для чего можно использовать Grok?</h2>
+        <ul>
+          <li>Генерировать контент и идеи для постов</li>
+          <li>Переводить и переписывать тексты</li>
+          <li>Структурировать информацию</li>
+          <li>Быстрее учиться и анализировать</li>
+          <li>Объяснять концепции и теории</li>
+          <li>Брейнштормить бизнес- и стартап-идеи</li>
+        </ul>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- WHY -->
+      <section id="why" class="section-soft section-soft--dark">
+        <h2>Почему Grok?</h2>
+        <ul>
+          <li>Более высокий эмоциональный интеллект, чем у многих чатботов</li>
+          <li>Лучше чувствует тон и намерение</li>
+          <li>Более естественные и «живые» диалоги</li>
+          <li>Честные и прямые ответы</li>
+          <li>Без фальшивой вежливости и корпоративного тона</li>
+        </ul>
+        <p>
+          Grok выбирают те, кто ценит <b>прямоту, реализм и характер</b>.
+        </p>
+
+        <p style="margin-top: 18px; opacity: 0.85">
+          <a href="#top" class="back-to-top">↑ Наверх</a>
+        </p>
+      </section>
+
+      <!-- DISCLAIMER -->
+      <p
+        style="
+          margin-top: 48px;
+          font-size: 13px;
+          opacity: 0.6;
+          text-align: center;
+        "
+      >
+        Это независимый проект и он не связан с xAI, Telegram, Илоном Маском или
+        Павлом Дуровым.
+      </p>
+
+      <p style="font-size: 12px; opacity: 0.5; text-align: center">
+        grok ai официальный telegram bot · grok telegram bot · grok ai telegram ·
+        grok 4 telegram · grok ai chat · telegram ai assistant · xai grok
+        telegram · ai
+      </p>
+    </div>
+  </body>
+</html>
