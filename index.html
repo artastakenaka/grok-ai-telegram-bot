@@ -46,6 +46,7 @@
       name="twitter:image"
       content="https://grok.cyberfrog.tech/frog_with_logo.jpg"
     />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -72,98 +73,264 @@
             "name": "Is this a cheap Grok alternative?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For users who don’t use Grok daily, pay-as-you-go pricing can be cheaper than the official $30/month subscription because you only pay for what you use."
+              "text": "For users who don't use Grok daily, pay-as-you-go pricing can be cheaper than the official $30/month subscription because you only pay for what you use."
             }
           }
         ]
       }
     </script>
-  </head>
 
-  <body
-    style="
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-      line-height: 1.6;
-    "
-  >
-    <div
-      style="
+    <style>
+      /* Base */
+      :root {
+        --bg: #0b0b0b;
+        --text: #ffffff;
+        --muted: rgba(255, 255, 255, 0.86);
+
+        --card: rgba(255, 255, 255, 0.03);
+        --card-strong: rgba(255, 255, 255, 0.02);
+
+        --border: rgba(255, 255, 255, 0.07);
+        --border-strong: rgba(255, 255, 255, 0.09);
+
+        --shadow: rgba(0, 0, 0, 0.35);
+
+        --green: #568203;
+        --green-2: #76a61a;
+
+        --slate: #1f2937;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: radial-gradient(
+            1200px 600px at 50% -180px,
+            rgba(86, 130, 3, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 520px at 20% 0%,
+            rgba(77, 163, 255, 0.12),
+            transparent 55%
+          ),
+          radial-gradient(
+            900px 520px at 80% 0%,
+            rgba(244, 180, 0, 0.12),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      /* Layout */
+      .container {
         max-width: 960px;
         margin: 0 auto;
         padding: 56px 20px;
         text-align: center;
-      "
-    >
-      <!-- HERO -->
-      <img
-        src="./frog_with_logo.jpg"
-        width="200"
-        alt="Grok Telegram Bot — Free Grok AI in Telegram"
-        style="
-          max-width: 90%;
-          height: auto;
-          border-radius: 18px;
-          margin-bottom: 22px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-        "
-      />
+        position: relative;
+      }
 
-      <h1 style="font-size: 42px; margin: 10px 0 8px; font-weight: 800">
-        Grok Telegram Bot
-      </h1>
-      <h2
-        style="
-          font-size: 20px;
-          opacity: 0.93;
-          max-width: 720px;
-          margin: 0 auto 28px;
-        "
-      >
-        Looking for the <b>official Grok xAI Telegram bot</b>? There is
-        currently no public official bot — this is a free, independent
-        alternative powered by <b>Grok 4</b>.
-      </h2>
+      /* Hero glow “cap” behind the top area */
+      .hero-cap {
+        position: absolute;
+        inset: -40px -40px auto -40px;
+        height: 260px;
+        background: radial-gradient(
+            480px 240px at 50% 30%,
+            rgba(86, 130, 3, 0.25),
+            transparent 70%
+          ),
+          radial-gradient(
+            520px 260px at 30% 40%,
+            rgba(77, 163, 255, 0.12),
+            transparent 70%
+          ),
+          radial-gradient(
+            520px 260px at 70% 40%,
+            rgba(244, 180, 0, 0.12),
+            transparent 70%
+          );
+        filter: blur(8px);
+        pointer-events: none;
+        z-index: 0;
+      }
 
-      <div
-        style="
-          display: flex;
-          gap: 16px;
-          justify-content: center;
-          flex-wrap: wrap;
-          margin-bottom: 26px;
-        "
-      >
-        <a
-          href="https://t.me/grok_ai_telegram_bot"
+      .hero {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.2px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      /* Image */
+      .hero-img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 18px;
+        margin-bottom: 22px;
+        box-shadow: 0 14px 46px rgba(0, 0, 0, 0.62);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* Buttons */
+      .btn-row {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 26px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+        transform: translateY(0);
+        transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease,
+          border-color 0.12s ease;
+        will-change: transform;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .btn:active {
+        transform: translateY(-1px);
+        opacity: 0.96;
+      }
+
+      .btn-primary {
+        color: #fff;
+        background: linear-gradient(180deg, var(--green-2), var(--green));
+        border-color: rgba(118, 166, 26, 0.35);
+      }
+
+      .btn-secondary {
+        color: #fff;
+        background: linear-gradient(180deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.95));
+        border-color: rgba(255, 255, 255, 0.14);
+      }
+
+      /* Sections (soft cards) */
+      .section-soft {
+        margin: 40px auto;
+        text-align: left;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 14px 36px var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+
+      .section-soft--dark {
+        background: var(--card-strong);
+        border: 1px solid var(--border-strong);
+      }
+
+      .section-soft ul,
+      .section-soft ol {
+        padding-left: 20px;
+        margin: 10px 0 0;
+      }
+
+      .section-soft li {
+        margin: 8px 0;
+        line-height: 1.5;
+      }
+
+      .section-soft p:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-soft a {
+        color: #9ad35a;
+        text-decoration: none;
+      }
+
+      .section-soft a:hover {
+        text-decoration: underline;
+      }
+
+      /* Divider */
+      .divider {
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 40px 0;
+      }
+
+      /* Footer links */
+      .footer-links a {
+        color: var(--green-2);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero-cap"></div>
+
+      <div class="hero">
+        <!-- HERO -->
+        <img
+          src="./frog_with_logo.jpg"
+          width="200"
+          alt="Grok Telegram Bot — Free Grok AI in Telegram"
+          class="hero-img"
+        />
+
+        <h1 style="font-size: 42px; margin: 10px 0 8px; font-weight: 800">
+          Grok Telegram Bot
+        </h1>
+        <h2
           style="
-            padding: 16px 32px;
-            background: #568203;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 20px;
+            opacity: 0.93;
+            max-width: 720px;
+            margin: 0 auto 28px;
           "
         >
-          Open @grok_ai_telegram_bot
-        </a>
-        <a
-          href="https://t.me/cyber_frog_ai"
-          style="
-            padding: 16px 32px;
-            background: #1f2937;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 18px;
-            border: 1px solid #444;
-          "
-        >
-          Join @cyber_frog_ai
-        </a>
+          Looking for the <b>official Grok xAI Telegram bot</b>? There is
+          currently no public official bot — this is a free, independent
+          alternative powered by <b>Grok 4</b>.
+        </h2>
+
+        <div class="btn-row">
+          <a href="https://t.me/grok_ai_telegram_bot" class="btn btn-primary">
+            Open @grok_ai_telegram_bot
+          </a>
+          <a href="https://t.me/cyber_frog_ai" class="btn btn-secondary">
+            Join @cyber_frog_ai
+          </a>
+        </div>
       </div>
 
       <!-- OFFICIAL GROK -->
@@ -255,9 +422,7 @@
           box-shadow: 0 4px 20px rgba(0, 255, 128, 0.12);
         "
       >
-        <h2 style="color: #568203; margin-top: 0">
-          What is Grok Telegram Bot?
-        </h2>
+        <h2 style="color: #568203; margin-top: 0">What is Grok Telegram Bot?</h2>
         <p>
           We built what people expected from Grok inside Telegram: a real AI
           that responds naturally, works directly in chat, and feels fast and
@@ -360,7 +525,7 @@
       </section>
 
       <!-- UPCOMING -->
-      <section style="margin: 40px auto; text-align: left">
+      <section class="section-soft">
         <h2>Upcoming Features</h2>
         <ul>
           <li>AI image generation</li>
@@ -371,7 +536,7 @@
       </section>
 
       <!-- HOW TO -->
-      <section style="margin: 40px auto; text-align: left">
+      <section class="section-soft">
         <h2>How to start</h2>
         <ol>
           <li>Open the bot: https://t.me/grok_ai_telegram_bot</li>
@@ -381,7 +546,7 @@
       </section>
 
       <!-- USE CASES -->
-      <section style="margin: 40px auto; text-align: left">
+      <section class="section-soft">
         <h2>What can you use Grok for?</h2>
         <ul>
           <li>Create content and post ideas</li>
@@ -394,16 +559,7 @@
       </section>
 
       <!-- WHY -->
-      <section
-        style="
-          margin: 40px auto;
-          text-align: left;
-          background: #111;
-          border: 1px solid #222;
-          border-radius: 18px;
-          padding: 28px;
-        "
-      >
+      <section class="section-soft section-soft--dark">
         <h2>Why Grok?</h2>
         <ul>
           <li>Higher emotional intelligence than most chatbots</li>
@@ -437,16 +593,12 @@
         telegram · ai chatbot telegram
       </p>
 
-      <hr style="border: 0; border-top: 1px solid #222; margin: 40px 0" />
+      <hr class="divider" />
 
-      <p style="font-size: 13px; opacity: 0.7; text-align: center">
-        <a href="./privacy.html" style="color: #568203; text-decoration: none"
-          >Privacy Policy</a
-        >
+      <p style="font-size: 13px; opacity: 0.7; text-align: center" class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
         &nbsp;|&nbsp;
-        <a href="./terms.html" style="color: #568203; text-decoration: none"
-          >Terms of Service</a
-        >
+        <a href="./terms.html">Terms of Service</a>
       </p>
     </div>
   </body>
