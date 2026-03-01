@@ -10,9 +10,6 @@
 
 <div align="center">
 
-Get real Grok AI power directly in Telegram <br>
-**Just send a message and get real AI chat bot answer** 
-
 🌐 **Official website:** https://grok.cyberfrog.tech
 </div>
 
