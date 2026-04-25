@@ -5,7 +5,7 @@
 <img src="https://github.com/user-attachments/assets/e50cfccb-ca85-4d77-b37e-6e19cd672114" width="420" alt="Grok Chat Bot - Pepe Robot with Ø">
 
 **The first real xAI Grok 4 Telegram bot with long-term chat memory**<br>
-**Free • Human-like AI**
+**Free • Chat • Images • Video • Web Search**
 </div>
 
 <div align="center">
@@ -34,41 +34,57 @@ We built what Pavel Durov and Elon Musk talked about but never released:
 a real Grok AI inside Telegram that **remembers your conversation**, responds naturally, and speaks without filters.
 
 The bot answers directly in your chat, keeps context between messages, and works in **any language**.
+You can also generate **AI images and videos** directly inside Telegram without a paid monthly subscription.
+
+## Available Modes
+
+Grok Telegram Bot now supports several AI modes:
+
+- ⚡️ **Express** — fast everyday AI replies
+- 🧠 **Expert** — deeper and more advanced answers
+- 🌐 **Internet** — answers with real-time web search
+- 🎨 **Image** — AI image generation
+- 🎬 **Video** — AI video generation
+
+## Free Usage
+
+You can start using the bot for free:
+
+- ⚡️ **Express** — 10 requests daily
+- 🧠 **Expert** — 1 request weekly
+- 🌐 **Internet** — 1 request weekly
+- 🎨 **Images** — 3 generations weekly
+
+Video generation is also available in the bot.
 
 
 ## Why Grok?
 
 Grok is the most **human-like AI model** available today.
 
+- More open creative generation  
+- Less restrictive than many mainstream AI tools  
+- No fake politeness  
+- Strong personality and humor  
 - Higher emotional intelligence than ChatGPT  
 - Better understanding of tone and mood  
 - More natural and “alive” conversation  
 - Honest, fearless answers  
-- No corporate censorship  
-- No fake politeness  
-- No annoying disclaimers  
 
 People who value **directness, realism and personality** choose Grok.
 
 
-## What can you use Grok for?
+## What can you use Grok Telegram Bot for?
 
-- ✍️ Create content & generate post ideas  
+- 🎨 Generate AI images directly in Telegram  
+- 🎬 Create AI videos inside the bot  
+- 🌐 Search the web and get up-to-date answers  
+- ✍️ Create posts, captions, and content ideas  
 - 🌍 Translate and rewrite texts in any language  
+- 💬 Chat naturally with long-term memory  
 - 🧠 Structure complex information  
 - 📚 Study, analyze, and learn faster  
-- 🔬 Explain basic and advanced concepts  
-- 💡 Brainstorm business, crypto & startup ideas 
-
-
-## Upcoming Features
-
-A **premium version** is currently in development:
-- AI image generation  
-- Real-time web search  
-- Advanced tools  
-
-Stay tuned.
+- 💡 Brainstorm business, crypto, and startup ideas  
 
 
 ## How to start
