@@ -9,22 +9,26 @@
 </div>
 
 <div align="center">
-
-🌐 **Official website:** https://grok.cyberfrog.tech
-</div>
-
-<div align="center">
-
-Get real Grok AI power directly in Telegram <br>
-**Just send a message and get real AI chat bot answer** 
-</div>
-
-
-<div align="center">
   <a href="https://t.me/grok_ai_telegram_bot">
     <img src="https://img.shields.io/badge/Open_bot-@grok_ai_telegram_bot-FF0066?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0088cc" alt="Open Bot">
   </a>
 </div>
+
+
+<div align="center">
+
+Get real Grok AI in Telegram <br>
+**Just send a message and start chatting now**
+</div>
+
+<div align="center">
+
+🌐 **Official website:** https://grok.cyberfrog.tech
+</div>
+
+
+
+
 
 ## What is Grok Telegram Bot?
 
@@ -62,7 +66,9 @@ Video generation is also available in the bot.
 
 Grok is the most **human-like AI model** available today.
 
-- More open creative generation  
+- Supports bold creative requests many AIs avoid
+- More freedom in image generation
+- Handles edgy and unconventional topics better
 - Less restrictive than many mainstream AI tools  
 - No fake politeness  
 - Strong personality and humor  
