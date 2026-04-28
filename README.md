@@ -23,7 +23,7 @@ Get real Grok AI in Telegram <br>
 
 <div align="center">
 
-🌐 **Official website:** https://grok.cyberfrog.tech
+🌐 **Official website:** https://cy-frog.github.io/grok-ai-telegram-bot/
 </div>
 
 
